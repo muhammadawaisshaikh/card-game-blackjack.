@@ -5,6 +5,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Overview
 This project is a simple implementation of the Blackjack card game using Angular. The core functionality includes dealing cards, player actions (hit, stand), and determining the winner based on the game rules.
 
+Rules: https://bicyclecards.com/how-to-play/blackjack/
+
 ## Technologies Used
 - Angular: The project is built using the Angular framework.
 - Bootstrap: Bootstrap is used as the design system library for styling and UI components.
