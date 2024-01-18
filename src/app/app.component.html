@@ -1,16 +1,33 @@
-<div>
-  <h1>Blackjack</h1>
-  <button (click)="startGame()" [disabled]="isGameStarted()">Start Game</button>
-  <button (click)="hit()" [disabled]="!isGameStarted() || isGameOver()">Hit</button>
-  <button (click)="stand()" [disabled]="!isGameStarted() || isGameOver()">Stand</button>
-  <div *ngIf="isGameStarted()">
-    <h2>Player Hand:</h2>
-    <ul>
-      <li *ngFor="let card of playerHand">{{ card.rank }} of {{ card.suit }}</li>
-    </ul>
-    <h2>Dealer Hand:</h2>
-    <ul>
-      <li *ngFor="let card of dealerHand">{{ card.rank }} of {{ card.suit }}</li>
-    </ul>
+<div class="container py-5">
+  <h1>Blackjack Game</h1>
+
+  <div class="py-3">
+    <button class="btn btn-primary" (click)="startGame()" [disabled]="isGameStarted()">Start Game</button>
+    <button class="btn btn-success ms-2" (click)="hit()" [disabled]="!isGameStarted() || isGameOver()">Hit</button>
+    <button class="btn btn-warning ms-2" (click)="stand()" [disabled]="!isGameStarted() || isGameOver()">Stand</button>
+  </div>
+
+  <div class="row gx-5" *ngIf="isGameStarted()">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h2>Player Hand:</h2>
+          <ul>
+            <li *ngFor="let card of playerHand">{{ card.rank }} of {{ card.suit }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h2>Dealer Hand:</h2>
+          <ul>
+            <li *ngFor="let card of dealerHand">{{ card.rank }} of {{ card.suit }}</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
