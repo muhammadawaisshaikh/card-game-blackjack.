@@ -1,6 +1,7 @@
 {
   "name": "card-game-blackjack",
   "version": "0.0.0",
+  "author": "awaisshaikh94@gmail.com",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
